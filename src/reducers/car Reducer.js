@@ -1,3 +1,4 @@
+// add initial state from App.js
 const initialState = {
     additionalPrice: 0,
     car: {
@@ -14,7 +15,12 @@ const initialState = {
       { id: 4, name: 'Rear spoiler', price: 250 }
     ]
   };
-
+//   Set up the Redux flow
+//   User should be able to add features to their car
+//   User should be able to remove added features from their car
+//   Total should update as user adds and removes features from their car
+//Reducer function with take in multiple pieces of data and return a single resulting value
+//the reducer pattern when it comes to the reducer hooks or redux will take in two objects. current state and action object reduces them down to a single object that will be updated state. 
   export const carReducer = (state = initialState, action) => {
     switch (action.type) {
       case 'ADD_FEATURE':
