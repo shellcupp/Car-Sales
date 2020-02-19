@@ -19,9 +19,10 @@ const initialState = {
 //   User should be able to add features to their car
 //   User should be able to remove added features from their car
 //   Total should update as user adds and removes features from their car
-//Reducer function with take in multiple pieces of data and return a single resulting value
-//the reducer pattern when it comes to the reducer hooks or redux will take in two objects. current state and action object reduces them down to a single object that will be updated state. 
+//Reducer functions take in multiple pieces of data and return a single resulting value
+//the reducer pattern when it comes to the reducer hooks or redux will take in two objects. current state and action object then reduces them down to a single object that will be new state and returns that new object
   export const carReducer = (state = initialState, action) => {
+    //carReducer starts with initial state then in the case of ADD_FEATURE I want to return state and additional price, also will return the state of the car with features and additional features added
     switch (action.type) {
       case 'ADD_FEATURE':
         console.log('added item', action.payload)
@@ -36,6 +37,7 @@ const initialState = {
           return feature !== action.payload
         }))
       };
+      //in the case of REMOVE_FEATURE I will return the state with the addition price subtracted then will also remove the features and additional features
       case 'REMOVE_FEATURE':
         return {
           ...state,

@@ -9,14 +9,6 @@ import Total from './components/Total';
 // User should be able to remove added features from their car
 // Total should update as user adds and removes features from their car
 const App = (props) => {
-  // const removeFeature = item => {
-  //   // dispatch an action here to remove an item
-  // };
-
-  // const buyItem = item => {
-  //   // dipsatch an action here to add an item
-  // };
-
   return (
     <div className="boxes">
       <div className="box">

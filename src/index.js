@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 import { carReducer } from './reducers/car Reducer';
+//set up store with reducer or reducer index
 
 const store = createStore(carReducer);
 console.log(store.getState());
